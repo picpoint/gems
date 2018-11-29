@@ -15,12 +15,33 @@ const settings = {
 const smartGrigConf = {
 		outputStyle: 'less',
 		colums: 12,
-		offset: '10px',   // межклоночник
+		offset: '30px',   // межклоночник
 		container: {
 				maxWidth: '1280px',
 				fields: '30px'   // отступ от края экрана
 		},
-		breakPoints: {}
+		breakPoints: {
+			xl: {
+				width: '1140px',
+				fields: '30px'
+			},
+			lg: {
+				width: '960px',
+				fields: '30px'
+			},
+			md: {
+				width: '720px',
+				fields: '20px'
+			},
+			sm: {
+				width: '540px',
+				fields: '10px'
+			},
+			xs: {
+				width: '480px',
+				fields: '5px'
+			}
+		}
 };
 
 gulp.task('preproc', function () {

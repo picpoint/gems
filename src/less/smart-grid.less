@@ -1,15 +1,61 @@
 @columns: 12;
 @atom: (100% / @columns);
 
-@offset: 10px;
+@break_xl: 1140px;
+@break_lg: 960px;
+@break_md: 720px;
+@break_sm: 540px;
+@break_xs: 480px;
+
+@offset: 30px;
+@offset_xl: @offset;
+@offset_lg: @offset;
+@offset_md: @offset;
+@offset_sm: @offset;
+@offset_xs: @offset;
 
 @offset_one_side: (@offset / 2);
+@offset_xl_one_side: (@offset_xl / 2);
+@offset_lg_one_side: (@offset_lg / 2);
+@offset_md_one_side: (@offset_md / 2);
+@offset_sm_one_side: (@offset_sm / 2);
+@offset_xs_one_side: (@offset_xs / 2);
 
 @fields: 30px;
+@fields_xl: 30px;
+@fields_lg: 30px;
+@fields_md: 20px;
+@fields_sm: 10px;
+@fields_xs: 5px;
 
 .wrapper-full(){
     padding-left: @fields;
     padding-right: @fields;
+
+    .xl-block({
+        padding-left: @fields_xl;
+        padding-right: @fields_xl;
+    });
+
+    .lg-block({
+        padding-left: @fields_lg;
+        padding-right: @fields_lg;
+    });
+
+    .md-block({
+        padding-left: @fields_md;
+        padding-right: @fields_md;
+    });
+
+    .sm-block({
+        padding-left: @fields_sm;
+        padding-right: @fields_sm;
+    });
+
+    .xs-block({
+        padding-left: @fields_xs;
+        padding-right: @fields_xs;
+    });
 }
 
 .row-offsets(){
@@ -68,6 +114,31 @@
     width: ~"calc(@{val} - @{offset})";
 }
 
+.size-xl(@n){
+    @val: 100% / @columns * @n;
+    .xl(width, ~"calc(@{val} - @{offset_xl})");
+}
+
+.size-lg(@n){
+    @val: 100% / @columns * @n;
+    .lg(width, ~"calc(@{val} - @{offset_lg})");
+}
+
+.size-md(@n){
+    @val: 100% / @columns * @n;
+    .md(width, ~"calc(@{val} - @{offset_md})");
+}
+
+.size-sm(@n){
+    @val: 100% / @columns * @n;
+    .sm(width, ~"calc(@{val} - @{offset_sm})");
+}
+
+.size-xs(@n){
+    @val: 100% / @columns * @n;
+    .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
 .shift(@n){
     @val: 100% / @columns * @n;
     margin-left: ~"calc(@{val} + @{offset_one_side})";
@@ -98,6 +169,226 @@
 .shift-padding-right(@n){
     @val: 100% / @columns * @n;
     padding-right: ~"calc(@{val} + @{offset_one_side})";
+}
+
+.shift-xl(@n){
+    @val: 100% / @columns * @n;
+    .xl(margin-left, ~"calc(@{val} + @{offset_xl_one_side})");
+    .xl(margin-right, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-xl-left(@n){
+    @val: 100% / @columns * @n;
+    .xl(margin-left, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-xl-right(@n){
+    @val: 100% / @columns * @n;
+    .xl(margin-right, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-xl-padding(@n){
+    @val: 100% / @columns * @n;
+    .xl(padding-left, ~"calc(@{val} + @{offset_xl_one_side})");
+    .xl(padding-right, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-xl-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xl(padding-left, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-xl-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xl(padding-right, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-lg(@n){
+    @val: 100% / @columns * @n;
+    .lg(margin-left, ~"calc(@{val} + @{offset_lg_one_side})");
+    .lg(margin-right, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-lg-left(@n){
+    @val: 100% / @columns * @n;
+    .lg(margin-left, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-lg-right(@n){
+    @val: 100% / @columns * @n;
+    .lg(margin-right, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-lg-padding(@n){
+    @val: 100% / @columns * @n;
+    .lg(padding-left, ~"calc(@{val} + @{offset_lg_one_side})");
+    .lg(padding-right, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-lg-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .lg(padding-left, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-lg-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .lg(padding-right, ~"calc(@{val} + @{offset_lg_one_side})");
+}
+
+.shift-md(@n){
+    @val: 100% / @columns * @n;
+    .md(margin-left, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(margin-right, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-md-left(@n){
+    @val: 100% / @columns * @n;
+    .md(margin-left, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-md-right(@n){
+    @val: 100% / @columns * @n;
+    .md(margin-right, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-md-padding(@n){
+    @val: 100% / @columns * @n;
+    .md(padding-left, ~"calc(@{val} + @{offset_md_one_side})");
+    .md(padding-right, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-md-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .md(padding-left, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-md-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .md(padding-right, ~"calc(@{val} + @{offset_md_one_side})");
+}
+
+.shift-sm(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-left(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-right(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-xs(@n){
+    @val: 100% / @columns * @n;
+    .xs(margin-left, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(margin-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.shift-xs-left(@n){
+    @val: 100% / @columns * @n;
+    .xs(margin-left, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.shift-xs-right(@n){
+    @val: 100% / @columns * @n;
+    .xs(margin-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.shift-xs-padding(@n){
+    @val: 100% / @columns * @n;
+    .xs(padding-left, ~"calc(@{val} + @{offset_xs_one_side})");
+    .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.shift-xs-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xs(padding-left, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.shift-xs-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.xl(@name, @value){
+    @media screen and (max-width: @break_xl){
+        @{name}: @value;
+    }
+}
+
+.xl-block(@content){
+    @media screen and (max-width: @break_xl){
+        @content();
+    }
+}
+
+.lg(@name, @value){
+    @media screen and (max-width: @break_lg){
+        @{name}: @value;
+    }
+}
+
+.lg-block(@content){
+    @media screen and (max-width: @break_lg){
+        @content();
+    }
+}
+
+.md(@name, @value){
+    @media screen and (max-width: @break_md){
+        @{name}: @value;
+    }
+}
+
+.md-block(@content){
+    @media screen and (max-width: @break_md){
+        @content();
+    }
+}
+
+.sm(@name, @value){
+    @media screen and (max-width: @break_sm){
+        @{name}: @value;
+    }
+}
+
+.sm-block(@content){
+    @media screen and (max-width: @break_sm){
+        @content();
+    }
+}
+
+.xs(@name, @value){
+    @media screen and (max-width: @break_xs){
+        @{name}: @value;
+    }
+}
+
+.xs-block(@content){
+    @media screen and (max-width: @break_xs){
+        @content();
+    }
 }
 
 .from(@min_width, @content){
