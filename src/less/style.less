@@ -15,3 +15,37 @@
 body {
 	background: @graybkg;
 }
+
+.container {
+	//border: @border;
+	height: 100%;
+		&-stone {
+			&-logo {
+				display: flex;
+				justify-content: center;
+				img {
+					height: 52px;
+					margin-top: 23px;
+				}
+			}
+			&-gem {
+				border: @border;
+				display: flex;
+				justify-content: center;
+				margin-top: 270px;
+				img {
+					height: 550px;
+				}
+			}
+			&-stonetext {
+				border: @border;
+				display: flex;
+				justify-content: center;
+				margin-top: 30px;
+				span {
+					font-family: 'Russo One', sans-serif;
+					font-size: 2.7rem;
+				}
+			}
+		}
+}

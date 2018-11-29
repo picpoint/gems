@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Russo One', sans-serif;
+  src: url(./fonts/RussoOne-Regular.ttf);
+}
 body,
 div,
 dl,
@@ -222,4 +226,34 @@ img {
 }
 body {
   background: #f3f3f3;
+}
+.container {
+  height: 100%;
+}
+.container-stone-logo {
+  display: flex;
+  justify-content: center;
+}
+.container-stone-logo img {
+  height: 52px;
+  margin-top: 23px;
+}
+.container-stone-gem {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 270px;
+}
+.container-stone-gem img {
+  height: 550px;
+}
+.container-stone-stonetext {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.container-stone-stonetext span {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2.7rem;
 }
