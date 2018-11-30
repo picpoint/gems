@@ -16,6 +16,7 @@ body {
 	background: @graybkg;
 }
 
+/*
 .container {
 	//border: @border;
 	height: 100%;
@@ -48,4 +49,21 @@ body {
 				}
 			}
 		}
+}
+*/
+
+.firstContainer {
+	&__wrap {
+		border: 1px solid blue;
+		margin: 12px;
+		display: flex;
+		justify-content: center;
+	}
+	&__logo {
+		border: @border;
+		margin: 12px;
+		img {
+			height: 47px;
+		}
+	}
 }

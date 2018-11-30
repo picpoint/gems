@@ -227,33 +227,51 @@ img {
 body {
   background: #f3f3f3;
 }
+/*
 .container {
-  height: 100%;
+	//border: @border;
+	height: 100%;
+		&-stone {
+			&-logo {
+				display: flex;
+				justify-content: center;
+				img {
+					height: 52px;
+					margin-top: 23px;
+				}
+			}
+			&-gem {
+				border: @border;
+				display: flex;
+				justify-content: center;
+				margin-top: 270px;
+				img {
+					height: 550px;
+				}
+			}
+			&-stonetext {
+				border: @border;
+				display: flex;
+				justify-content: center;
+				margin-top: 30px;
+				span {
+					font-family: 'Russo One', sans-serif;
+					font-size: 2.7rem;
+				}
+			}
+		}
 }
-.container-stone-logo {
+*/
+.firstContainer__wrap {
+  border: 1px solid blue;
+  margin: 12px;
   display: flex;
   justify-content: center;
 }
-.container-stone-logo img {
-  height: 52px;
-  margin-top: 23px;
-}
-.container-stone-gem {
+.firstContainer__logo {
   border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  margin-top: 270px;
+  margin: 12px;
 }
-.container-stone-gem img {
-  height: 550px;
-}
-.container-stone-stonetext {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.container-stone-stonetext span {
-  font-family: 'Russo One', sans-serif;
-  font-size: 2.7rem;
+.firstContainer__logo img {
+  height: 47px;
 }
