@@ -16,54 +16,53 @@ body {
 	background: @graybkg;
 }
 
-/*
-.container {
-	//border: @border;
-	height: 100%;
-		&-stone {
-			&-logo {
-				display: flex;
-				justify-content: center;
-				img {
-					height: 52px;
-					margin-top: 23px;
-				}
-			}
-			&-gem {
-				border: @border;
-				display: flex;
-				justify-content: center;
-				margin-top: 270px;
-				img {
-					height: 550px;
-				}
-			}
-			&-stonetext {
-				border: @border;
-				display: flex;
-				justify-content: center;
-				margin-top: 30px;
-				span {
-					font-family: 'Russo One', sans-serif;
-					font-size: 2.7rem;
-				}
-			}
-		}
-}
-*/
 
 .firstContainer {
+	//border: 1px solid blueviolet;
 	&__wrap {
-		border: 1px solid blue;
+		//border: 1px solid blue;
 		margin: 12px;
 		display: flex;
 		justify-content: center;
 	}
 	&__logo {
-		border: @border;
+		//border: @border;
 		margin: 12px;
 		img {
 			height: 47px;
+		}
+	}
+	&__gem {
+		//border: @border;
+		display: flex;
+		justify-content: center;
+		img {
+			margin-top: 250px;
+			height: 550px;
+		}
+	}
+	&__gemText {
+		display: flex;
+		justify-content: center;
+		h1 {
+			//border: @border;
+			margin-top: 23px;
+			font-size: 2.7rem;
+			font-family: 'Russo One', sans-serif;
+		}
+	}
+}
+
+
+.lineContainer {
+	display: flex;
+	justify-content: center;
+	&__line {
+		width: 90px;
+		margin-top: 50px;
+		hr {
+			background-color: #000000;
+			height: 3px;
 		}
 	}
 }
