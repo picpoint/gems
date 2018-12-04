@@ -6,7 +6,7 @@ var browserSync = require('browser-sync').create();
 const settings = {
 	root: './src',
 	dist: './dist',
-	srcless: './src/less/style.less',
+	srcless: './src/less/*.less',
 	srccss: './dist/css',
 	srchtml: './dist/*.html',
 	srcjs: './src/js'
@@ -70,7 +70,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch', ['preproc', 'js', 'browserSync'], function () {
-	gulp.watch(settings.srcless, ['preproc']);
+	gulp.watch('src/less/*.less', ['preproc']);
 	gulp.watch(settings.srcjs + '/*.js', ['js']);
 	gulp.watch(settings.srchtml, ['html']);
 });
