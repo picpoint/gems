@@ -1,10 +1,14 @@
 @font-face {
   font-family: 'Russo One', sans-serif;
-  src: url('./fonts/RussoOne-Regular.ttf');
+  src: url('../fonts/RussoOne-Regular.ttf');
 }
 @font-face {
   font-family: 'Orbitron', sans-serif;
-  src: url('./fonts/Orbitron-Medium.ttf');
+  src: url('../fonts/Orbitron-Medium.ttf');
+}
+@font-face {
+  font-family: 'Play', sans-serif;
+  src: url('../fonts/Play-Bold.ttf');
 }
 @font-face {
   font-family: 'icomoon';
@@ -311,74 +315,114 @@ body {
   margin-top: 60px;
 }
 .secondContainer__icons {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
   font-family: 'Orbitron', sans-serif;
 }
 .secondContainer__tree {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 23px;
-  /*
-		i {
-			font-size: 2.5rem;
-			margin-bottom: 30px;
-		}
-		*/
+}
+.secondContainer__tree i {
+  font-family: 'icomoon';
+  font-size: 3rem;
 }
 .secondContainer__tree span {
-  font-family: 'icomoon';
+  font-size: 1rem;
+  margin-top: 25px;
 }
 .secondContainer__water {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 23px;
 }
 .secondContainer__water i {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-family: 'icomoon';
+  font-size: 3rem;
 }
-.secondContainer__cloud {
-  border: 1px solid red;
+.secondContainer__water span {
+  font-size: 1rem;
+  margin-top: 25px;
+}
+.secondContainer__wind {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 23px;
 }
-.secondContainer__cloud i {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.secondContainer__wind i {
+  font-family: 'icomoon';
+  font-size: 3rem;
 }
-.secondContainer__snow {
-  border: 1px solid red;
+.secondContainer__wind span {
+  font-size: 1rem;
+  margin-top: 25px;
+}
+.secondContainer__mountain {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 23px;
 }
-.secondContainer__snow i {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.secondContainer__mountain i {
+  font-family: 'icomoon';
+  font-size: 3rem;
 }
-.secondContainer__bolt {
-  border: 1px solid red;
+.secondContainer__mountain span {
+  font-size: 1rem;
+  margin-top: 25px;
+}
+.secondContainer__autumn {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 23px;
 }
-.secondContainer__bolt i {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.secondContainer__autumn i {
+  font-family: 'icomoon';
+  font-size: 3rem;
+}
+.secondContainer__autumn span {
+  font-size: 1rem;
+  margin-top: 25px;
 }
 .secondContainer__about {
   height: 200px;
-  border: 1px solid red;
-  margin-top: 50px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.secondContainer__textone {
+  height: 100%;
+  width: 17%;
+}
+.secondContainer__textone h2 {
+  font-size: 1.4rem;
+  font-family: 'Play', sans-serif;
+  padding: 15px 15px;
+  text-align: right;
+}
+.secondContainer__texttoo {
+  height: 100%;
+  width: 17%;
+}
+.secondContainer__texttoo h2 {
+  font-size: 1rem;
+  font-family: 'Russo One', sans-serif;
+  color: #9c9c9c;
+  padding: 15px 15px;
+}
+.secondContainer__textthree {
+  height: 100%;
+  width: 17%;
+}
+.secondContainer__textthree h2 {
+  font-size: 1rem;
+  font-family: 'Russo One', sans-serif;
+  color: #9c9c9c;
+  padding: 15px 15px;
 }
