@@ -22,13 +22,13 @@ body {
 	//border: @border;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
-	height: 830px;
 	&__wrap {
 		display: flex;
 		justify-content: center;
 	}
 	&__logo {
-		margin-top: 25px;
+		//border: @border;
+		margin: 25px 0 750px 0;
 		img {
 			height: 47px;
 		}
@@ -40,7 +40,7 @@ body {
 
 //SECOND CONTAINER START
 .secondContainer {
-	height: 300px;
+	//height: 300px;
 	&__wrap {
 		//border: @border;
 	}
@@ -154,7 +154,6 @@ body {
 		}
 	}
 	&__about {
-		height: 200px;
 		//border: @border;
 		margin-top: 70px;
 		display: flex;
@@ -162,19 +161,16 @@ body {
 	}
 	&__textone {
 		//border: @border;
-		height: 100%;
 		width: 17%;
 		h2 {
 			font-size: 1.4rem;
 			font-family: 'Play', sans-serif;
-
 			padding: 15px 15px;
 			text-align: right;
 		}
 	}
 	&__texttoo {
 		//border: @border;
-		height: 100%;
 		width: 17%;
 		h2 {
 			font-size: 1rem;
@@ -185,7 +181,6 @@ body {
 	}
 	&__textthree {
 		//border: @border;
-		height: 100%;
 		width: 17%;
 		h2 {
 			font-size: 1rem;
@@ -207,23 +202,67 @@ body {
 	//border: @border;
 	-webkit-clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
 	clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
-	height: 700px;
-	margin-top: 500px;
-	z-index: -20;
+	margin-top: 180px;
+	//z-index: -5;
 	&__wrap {
-		border: @border;
+		//border: @border;
 		display: flex;
-		justify-content: center;
-		height: 200px;
-		z-index: 20;
+		flex-direction: column;
+		align-items: center;
 	}
 	&__headline {
-		border: @border;
-		z-index: 20;
-		margin-top: 50px;
+		//border: @border;
+		margin-top: 20px;
+		z-index: 5;
 		h1 {
 			font-size: 3rem;
-			z-index: 20;
+			font-family: 'Orbitron', sans-serif;
+			z-index: 10;
+		}
+	}
+	&__line {
+		//border: @border;
+		margin-top: 60px;
+		hr {
+			background-color: black;
+			height: 3px;
+			width: 90px;
+		}
+	}
+	&__workpeople {
+		//border: @border;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 30%;
+		margin: 50px 0 300px 0;
+		font-family: 'Orbitron', sans-serif;
+		text-align: center;
+	}
+	&__left {
+		//width: 50%;
+		h1 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+		span {
+			color: @turquoise;
+			font-weight: bold;
+			font-size: 0.8rem;
+		}
+	}
+	&__right {
+		//width: 50%;
+		h1 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+		span {
+			color: @turquoise;
+			font-weight: bold;
+			font-size: 0.8rem;
 		}
 	}
 }
