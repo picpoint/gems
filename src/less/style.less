@@ -189,6 +189,19 @@ body {
 			padding: 15px 15px;
 		}
 	}
+	&__headline {
+		border: @border;
+		display: flex;
+		justify-content: center;
+		h1 {
+			//border: @border;
+			font-size: 3rem;
+			font-family: 'Orbitron', sans-serif;
+			margin-top: 145px;
+			position: absolute;
+			z-index: 5;
+		}
+	}
 
 }
 //SECOND CONTAINER END
@@ -202,27 +215,18 @@ body {
 	//border: @border;
 	-webkit-clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
 	clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
-	margin-top: 180px;
+	margin-top: 120px;
 	//z-index: -5;
+	position: relative;
 	&__wrap {
 		//border: @border;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	&__headline {
-		//border: @border;
-		margin-top: 20px;
-		z-index: 5;
-		h1 {
-			font-size: 3rem;
-			font-family: 'Orbitron', sans-serif;
-			z-index: 10;
-		}
-	}
 	&__line {
 		//border: @border;
-		margin-top: 60px;
+		margin-top: 130px;
 		hr {
 			background-color: black;
 			height: 3px;
@@ -230,7 +234,7 @@ body {
 		}
 	}
 	&__workpeople {
-		//border: @border;
+		border: @border;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -240,7 +244,7 @@ body {
 		text-align: center;
 	}
 	&__left {
-		//width: 50%;
+		//border: @border;
 		h1 {
 			font-size: 1.2rem;
 			font-weight: bold;
@@ -253,7 +257,7 @@ body {
 		}
 	}
 	&__right {
-		//width: 50%;
+		//border: @border;
 		h1 {
 			font-size: 1.2rem;
 			font-weight: bold;
@@ -268,4 +272,55 @@ body {
 }
 
 //THIRD CONTAINER END
+
+
+
+//FOUR CONTAINER START
+.fourContainer {
+	&__wrap {
+		border: @border;
+	}
+	&__workflow {
+		display: flex;
+		justify-content: center;
+		border: @border;
+		h1 {
+			//border: @border;
+			font-size: 3rem;
+			font-family: 'Orbitron', sans-serif;
+			margin-top: -110px;
+			position: absolute;
+			//z-index: 5;
+		}
+	}
+	&__line {
+		//border: @border;
+		//margin-top: -30px;
+		hr {
+			background-color: black;
+			height: 3px;
+			width: 90px;
+		}
+	}
+	&__process {
+		display: flex;
+		justify-content: center;
+		//width: 50%;
+		border: @border;
+		span {
+			width: 18%;
+			font-weight: bold;
+			margin-top: 60px;
+			text-align: center;
+			font-size: 1.4rem;
+			font-family: 'Russo One', sans-serif;
+			h4 {
+				color: @turquoise;
+				display: inline-block;
+				font-weight: bold;
+			}
+		}
+	}
+}
+//FOUR CONTAINER END
 
