@@ -40,7 +40,6 @@ body {
 
 //SECOND CONTAINER START
 .secondContainer {
-	//height: 300px;
 	&__wrap {
 		//border: @border;
 	}
@@ -60,6 +59,7 @@ body {
 			font-size: 2.5rem;
 			font-family: 'Russo One', sans-serif;
 			margin-top: 25px;
+			letter-spacing: @let-space;
 		}
 	}
 	&__line {
@@ -190,7 +190,7 @@ body {
 		}
 	}
 	&__headline {
-		border: @border;
+		//border: @border;
 		display: flex;
 		justify-content: center;
 		h1 {
@@ -200,6 +200,7 @@ body {
 			margin-top: 145px;
 			position: absolute;
 			z-index: 5;
+			letter-spacing: @let-space;
 		}
 	}
 
@@ -216,7 +217,6 @@ body {
 	-webkit-clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
 	clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%);
 	margin-top: 120px;
-	//z-index: -5;
 	position: relative;
 	&__wrap {
 		//border: @border;
@@ -234,7 +234,7 @@ body {
 		}
 	}
 	&__workpeople {
-		border: @border;
+		//border: @border;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -278,24 +278,23 @@ body {
 //FOUR CONTAINER START
 .fourContainer {
 	&__wrap {
-		border: @border;
+		//border: @border;
 	}
 	&__workflow {
 		display: flex;
 		justify-content: center;
-		border: @border;
+		//border: @border;
 		h1 {
 			//border: @border;
 			font-size: 3rem;
 			font-family: 'Orbitron', sans-serif;
 			margin-top: -110px;
 			position: absolute;
-			//z-index: 5;
+			letter-spacing: @let-space;
 		}
 	}
 	&__line {
 		//border: @border;
-		//margin-top: -30px;
 		hr {
 			background-color: black;
 			height: 3px;
@@ -305,10 +304,10 @@ body {
 	&__process {
 		display: flex;
 		justify-content: center;
-		//width: 50%;
-		border: @border;
+		//border: @border;
 		span {
-			width: 18%;
+			//border: @border;
+			width: 20%;
 			font-weight: bold;
 			margin-top: 60px;
 			text-align: center;
@@ -319,6 +318,35 @@ body {
 				display: inline-block;
 				font-weight: bold;
 			}
+		}
+	}
+	&__rounds{
+		//border: @border;
+		display: flex;
+		justify-content: center;
+		margin-top: 100px;
+		img {
+			width: 60%;
+			height: 100%;
+		}
+	}
+	&__descrrounds {
+		//border: @border;
+		margin: 70px 0 120px 0;
+		display: flex;
+		justify-content: center;
+	}
+	&__desctext {
+		//border: @border;
+		display: flex;
+		justify-content: space-around;
+		width: 60%;
+		span {
+			//border: @border;
+			font-family: 'Russo One', sans-serif;
+			font-size: 1rem;
+			font-weight: bolder;
+			text-align: center;
 		}
 	}
 }

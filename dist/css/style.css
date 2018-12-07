@@ -303,6 +303,7 @@ body {
   font-size: 2.5rem;
   font-family: 'Russo One', sans-serif;
   margin-top: 25px;
+  letter-spacing: 7px;
 }
 .secondContainer__line hr {
   background-color: black;
@@ -419,7 +420,6 @@ body {
   padding: 15px 15px;
 }
 .secondContainer__headline {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -429,6 +429,7 @@ body {
   margin-top: 145px;
   position: absolute;
   z-index: 5;
+  letter-spacing: 7px;
 }
 .thirdContainer {
   background-color: #f3f3f3;
@@ -451,7 +452,6 @@ body {
   width: 90px;
 }
 .thirdContainer__workpeople {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -480,19 +480,16 @@ body {
   font-weight: bold;
   font-size: 0.8rem;
 }
-.fourContainer__wrap {
-  border: 1px solid red;
-}
 .fourContainer__workflow {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
 }
 .fourContainer__workflow h1 {
   font-size: 3rem;
   font-family: 'Orbitron', sans-serif;
   margin-top: -110px;
   position: absolute;
+  letter-spacing: 7px;
 }
 .fourContainer__line hr {
   background-color: black;
@@ -502,10 +499,9 @@ body {
 .fourContainer__process {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
 }
 .fourContainer__process span {
-  width: 18%;
+  width: 20%;
   font-weight: bold;
   margin-top: 60px;
   text-align: center;
@@ -516,4 +512,29 @@ body {
   color: #99cdc0;
   display: inline-block;
   font-weight: bold;
+}
+.fourContainer__rounds {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.fourContainer__rounds img {
+  width: 60%;
+  height: 100%;
+}
+.fourContainer__descrrounds {
+  margin: 70px 0 120px 0;
+  display: flex;
+  justify-content: center;
+}
+.fourContainer__desctext {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.fourContainer__desctext span {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
 }
