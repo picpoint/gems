@@ -25,12 +25,50 @@ body {
 	&__wrap {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
+		//flex-direction: column;
+	}
+	&__lineone {
+		//border: @border;
+		height: 100%;
+		width: 100%;
+		margin: 10px 0 -10px 0;
+		hr {
+			position: relative;
+			left: 12px;
+			background-color: black;
+			height: 1px;
+			width: 25px;
+			transform: rotate(120deg);
+		}
 	}
 	&__logo {
 		//border: @border;
-		margin: 25px 0 750px 0;
+		margin: 10px 0 5px 0;
+		/*
 		img {
 			height: 47px;
+		}
+		*/
+		h1 {
+			font-size: 1.4rem;
+			font-family: 'Ubuntu', sans-serif;
+			letter-spacing: 5px;
+			margin-top: 10px;
+		}
+	}
+	&__linetwo {
+		//border: @border;
+		height: 100%;
+		width: 100%;
+		margin: 5px 0 750px 0;
+		hr {
+			position: relative;
+			left: -12px;
+			background-color: black;
+			height: 1px;
+			width: 25px;
+			transform: rotate(120deg);
 		}
 	}
 }

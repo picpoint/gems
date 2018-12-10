@@ -11,6 +11,10 @@
   src: url('../fonts/Play-Bold.ttf');
 }
 @font-face {
+  font-family: 'Ubuntu', sans-serif;
+  src: url('../fonts/Ubuntu-Regular.ttf');
+}
+@font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.eot?ri1et7');
   src: url('../fonts/icomoon.eot?ri1et7#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ri1et7') format('truetype'), url('../fonts/icomoon.woff?ri1et7') format('woff'), url('../fonts/icomoon.svg?ri1et7#icomoon') format('svg');
@@ -279,12 +283,47 @@ body {
 .firstContainer__wrap {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.firstContainer__lineone {
+  height: 100%;
+  width: 100%;
+  margin: 10px 0 -10px 0;
+}
+.firstContainer__lineone hr {
+  position: relative;
+  left: 12px;
+  background-color: black;
+  height: 1px;
+  width: 25px;
+  transform: rotate(120deg);
 }
 .firstContainer__logo {
-  margin: 25px 0 750px 0;
+  margin: 10px 0 5px 0;
+  /*
+		img {
+			height: 47px;
+		}
+		*/
 }
-.firstContainer__logo img {
-  height: 47px;
+.firstContainer__logo h1 {
+  font-size: 1.4rem;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+.firstContainer__linetwo {
+  height: 100%;
+  width: 100%;
+  margin: 5px 0 750px 0;
+}
+.firstContainer__linetwo hr {
+  position: relative;
+  left: -12px;
+  background-color: black;
+  height: 1px;
+  width: 25px;
+  transform: rotate(120deg);
 }
 .secondContainer__gem {
   display: flex;
