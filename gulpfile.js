@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var smartgrid = require('smart-grid');
+const htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 
 const settings = {
@@ -50,7 +51,7 @@ gulp.task('preproc', function () {
 		.pipe(less())
 		.pipe(gulp.dest(settings.srccss))
 		.pipe(browserSync.reload({
-			stream: true
+				stream: true
 		}));
 });
 
@@ -58,7 +59,7 @@ gulp.task('html', function () {
 	gulp.src(settings.srchtml)
 		.pipe(gulp.dest(settings.dist))
 		.pipe(browserSync.reload({
-			stream: true
+				stream: true
 		}));
 });
 
@@ -70,10 +71,20 @@ gulp.task('js', function () {
 		}));
 });
 
-gulp.task('watch', ['preproc', 'js', 'browserSync'], function () {
+gulp.task('htmlmin', function () {
+ return gulp.src(settings.root + '/*.html')
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest(settings.dist))
+  .pipe(browserSync.reload({
+   stream: true
+  }));
+});
+
+gulp.task('watch', ['preproc', 'htmlmin', 'js', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);
 	gulp.watch(settings.srcjs + '/*.js', ['js']);
 	gulp.watch(settings.srchtml, ['html']);
+ qulp.watch(settings.root + '/*.html', ['htmlmin']);
 });
 
 gulp.task('grid', function () {

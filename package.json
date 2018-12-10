@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-less": "^4.0.1",
     "smart-grid": "^2.1.2"
   }
