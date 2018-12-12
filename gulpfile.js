@@ -19,6 +19,7 @@ const smartGrigConf = {
 		outputStyle: 'less',
 		colums: 12,
 		offset: '30px',   // межклоночник
+		mobileFirst: false,
 		container: {
 				maxWidth: '1280px',
 				fields: '30px'   // отступ от края экрана
@@ -51,11 +52,17 @@ gulp.task('preproc', function () {
 	return gulp.src(settings.srcless)
 		.pipe(less())
 		.pipe(gulp.dest(settings.srccss))
+ 
+ //gulp.src('./dist/css/*.css')
+  .pipe(cleanCSS())
+  .pipe(gulp.dest('./dist/css'))
+  
 		.pipe(browserSync.reload({
 				stream: true
 		}));
 });
 
+/*
 gulp.task('cleanCSS', function () {
 	return gulp.src('./dist/css/*.css')
 		.pipe(cleanCSS())
@@ -64,6 +71,7 @@ gulp.task('cleanCSS', function () {
    stream: true
   }));
 });
+*/
 
 gulp.task('js', function () {
 		gulp.src(settings.srcjs + '/*.js')
@@ -84,10 +92,10 @@ gulp.task('htmlmin', function () {
 });
 
 
-gulp.task('watch', ['preproc', 'js', 'cleanCSS', 'htmlmin', 'browserSync'], function () {
+gulp.task('watch', ['preproc', 'js', 'htmlmin', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);
 	gulp.watch(settings.srcjs + '/*.js', ['js']);
-	gulp.watch('./dist/css/*.css', ['cleanCSS']);
+	//gulp.watch('./dist/css/*.css', ['cleanCSS']);
  gulp.watch('./src/*.html', ['htmlmin']);
 });
 

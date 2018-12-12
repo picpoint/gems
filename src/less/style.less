@@ -4,7 +4,7 @@
 
 .reset();
 .debug {
-	.debug(rgba(0, 0, 0, 0.2), 1px solid blue);
+	.debug(rgba(0, 0, 0, 0.1), 1px solid blue);
 }
 
 .wrapper {  // центрущая обертка
@@ -13,6 +13,7 @@
 
 body {
 	background: @whitebkg;
+	box-sizing: border-box;
 }
 
 //FIRST CONTAINER START
@@ -191,39 +192,63 @@ body {
 		}
 	}
 	&__about {
-		//border: @border;
-		margin-top: 70px;
+		border: @border;
 		display: flex;
+		//.row-flex();
+		.size(12);
+		.size-lg(12);
+		margin-top: 70px;
 		justify-content: center;
 	}
 	&__textone {
-		//border: @border;
-		width: 17%;
+		border: @border;
+		display: flex;
+		//width: 17%;
+		//.row-flex();
+		.size(3);
+		.size-md(4);
 		h2 {
 			font-size: 1.4rem;
 			font-family: 'Play', sans-serif;
 			padding: 15px 15px;
 			text-align: right;
+			.lg-block({
+				font-size: 1rem;
+			});
 		}
 	}
 	&__texttoo {
-		//border: @border;
-		width: 17%;
+		border: @border;
+		//width: 17%;
+		//.row-flex();
+		display: flex;
+		.size(3);
+		.size-md(4);
 		h2 {
 			font-size: 1rem;
 			font-family: 'Russo One', sans-serif;
 			color: #9c9c9c;
 			padding: 15px 15px;
+			.lg-block({
+				font-size: 0.8rem;
+			});
 		}
 	}
 	&__textthree {
-		//border: @border;
-		width: 17%;
+		border: @border;
+		//width: 17%;
+		//.row-flex();
+		display: flex;
+		.size(3);
+		.size-md(4);
 		h2 {
 			font-size: 1rem;
 			font-family: 'Russo One', sans-serif;
 			color: #9c9c9c;
 			padding: 15px 15px;
+			.lg-block({
+				font-size: 0.8rem;
+			});
 		}
 	}
 	&__headline {
