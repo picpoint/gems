@@ -11,6 +11,7 @@
 	.wrapper();
 }
 
+
 body {
 	background: @whitebkg;
 	box-sizing: border-box;
@@ -32,9 +33,11 @@ body {
 		//border: @border;
 		height: 100%;
 		width: 100%;
-		margin: 10px 0 -10px 0;
+		margin: 10px 0 -7px 0;
+		//transition: ease-out 5s;
 			.lg-block({
 				margin: 10px 0 -17px 0;
+				//transition: ease-out 5s;
 			});
 		hr {
 			position: relative;
@@ -43,8 +46,12 @@ body {
 			height: 1px;
 			width: 25px;
 			transform: rotate(120deg);
+			transition: @transition;
 				.lg-block({
 					width: 15px;
+				});
+				.xs-block({
+					width: 12px;
 				});
 		}
 	}
@@ -56,8 +63,13 @@ body {
 			font-family: 'Ubuntu', sans-serif;
 			letter-spacing: 5px;
 			margin-top: 10px;
+			transition: @transition;
 				.lg-block({
 					font-size: 1rem;
+				});
+				.xs-block({
+					font-size: 0.8rem;
+					letter-spacing: 3px;
 				});
 		}
 	}
@@ -66,6 +78,7 @@ body {
 		height: 100%;
 		width: 100%;
 		margin: 5px 0 750px 0;
+		//transition: @transition;
 			.lg-block({
 				margin: -7px 0 750px 0;
 			});
@@ -76,9 +89,13 @@ body {
 			height: 1px;
 			width: 25px;
 			transform: rotate(120deg);
+			transition: @transition;
 				.lg-block({
 					width: 15px;
 					left: 0px;
+				});
+				.xs-block({
+					width: 12px;
 				});
 		}
 	}
@@ -99,6 +116,15 @@ body {
 				height: 550px;
 				margin-top: -480px;
 				z-index: 1;
+				transition: @transition;
+					.lg-block({
+						height: 450px;
+						transition: @transition;
+					});
+					.xs-block({
+						height: 400px;
+						transition: @transition;
+					});
 			}
 	}
 	&__gemText {
