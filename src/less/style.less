@@ -429,7 +429,7 @@ body {
 		}
 	}
 	&__workpeople {
-		border: @border;
+		//border: @border;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -441,11 +441,12 @@ body {
 				width: 45%;
 			});
 			.md-block({
-				width: 50%;
+				width: 60%;
 			});
 	}
 	&__left {
-		border: @border;
+		//border: @border;
+		margin: 10px;
 		.lg-block({
 			padding: 10px;
 		});
@@ -458,6 +459,9 @@ body {
 				font-size: 1rem;
 				transition: @transition;
 			});
+			.sm-block({
+				font-size: 0.8rem;
+			});
 		}
 		span {
 			color: @turquoise;
@@ -466,11 +470,15 @@ body {
 			.md-block({
 				font-size: 0.6rem;
 				transition: @transition;
+			});
+			.sm-block({
+				font-size: 0.5rem;
 			});
 		}
 	}
 	&__right {
-		border: @border;
+		//border: @border;
+		margin: 10px;
 		.lg-block({
 			padding: 10px;
 		});
@@ -483,6 +491,9 @@ body {
 				font-size: 1rem;
 				transition: @transition;
 			});
+			.sm-block({
+				font-size: 0.8rem;
+			});
 		}
 		span {
 			color: @turquoise;
@@ -492,6 +503,9 @@ body {
 			.md-block({
 				font-size: 0.6rem;
 				transition: @transition;
+			});
+			.sm-block({
+				font-size: 0.5rem;
 			});
 		}
 	}
@@ -517,6 +531,19 @@ body {
 			margin-top: -110px;
 			position: absolute;
 			letter-spacing: @let-space;
+			transition: @transition;
+			.lg-block({
+				font-size: 2.5rem;
+				transition: @transition;
+			});
+			.md-block({
+				font-size: 2rem;
+				transition: @transition;
+			});
+			.sm-block({
+				font-size: 1.5rem;
+				transition: @transition;
+			});
 		}
 	}
 	&__line {
@@ -525,6 +552,21 @@ body {
 			background-color: black;
 			height: 3px;
 			width: 90px;
+			transition: @transition;
+			.lg-block({
+				width: 60px;
+				margin-top: -10px;
+				transition: @transition;
+			});
+			.md-block({
+				width: 40px;
+				margin-top: -40px;
+			});
+			.sm-block({
+				width: 30px;
+				height: 2px;
+				margin-top: -50px;
+			});
 		}
 	}
 	&__process {
@@ -539,6 +581,22 @@ body {
 			text-align: center;
 			font-size: 1.4rem;
 			font-family: 'Russo One', sans-serif;
+			transition: @transition;
+			.xl-block({
+				width: 30%;
+				transition: @transition;
+			});
+			.md-block({
+				font-size: 1rem;
+				margin-top: 40px;
+			});
+			.sm-block({
+				width: 45%;
+				font-size: 0.8rem;
+			});
+			.xs-block({
+				font-size: 0.6rem;
+			});
 			h4 {
 				color: @turquoise;
 				display: inline-block;
@@ -552,9 +610,24 @@ body {
 		display: flex;
 		justify-content: center;
 		margin-top: 100px;
+		transition: @transition;
+		.md-block({
+			margin-top: 60px;
+			transition: @transition;
+		});
+		.xs-block({
+			margin-top: 30px;
+			transition: @transition;
+		});
 		img {
+			//border: @border	;
 			width: 60%;
 			height: 100%;
+			transition: @transition;
+			.md-block({
+				width: 70%;
+				transition: @transition;;
+			});
 		}
 	}
 	&__descrrounds {
@@ -562,18 +635,42 @@ body {
 		margin: 70px 0 120px 0;
 		display: flex;
 		justify-content: center;
+		.md-block({
+			margin: 40px 0 50px 0;
+		});
 	}
 	&__desctext {
 		//border: @border;
 		display: flex;
 		justify-content: space-around;
 		width: 60%;
+		transition: @transition;
+		.md-block({
+			width: 70%;
+			transition: @transition;
+		});
+		.xs-block({
+			width: 90%;
+			align-items: center;
+			transition: @transition;
+		});
 		span {
 			//border: @border;
 			font-family: 'Russo One', sans-serif;
 			font-size: 1rem;
 			font-weight: bolder;
 			text-align: center;
+			margin: 0 5px;
+			transition: @transition;
+			.lg-block({
+				font-size: 0.8rem;
+				transition: @transition;
+			});
+			.md-block({
+				font-size: 0.6rem;
+				transition: @transition;
+				font-weight: normal;
+			});
 		}
 	}
 }
