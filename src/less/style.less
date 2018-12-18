@@ -32,6 +32,10 @@
 			margin-top: 15px;
 			transition: @transition;
 		});
+		.xs-block({
+			font-size: 0.9rem;
+			transition: @transition;
+		});
 	}
 }
 // миксин для блока с иконками end
@@ -93,7 +97,7 @@ body {
 					font-size: 1rem;
 				});
 				.xs-block({
-					font-size: 0.8rem;
+					font-size: 1rem;
 					letter-spacing: 3px;
 				});
 		}
@@ -138,6 +142,7 @@ body {
 		display: flex;
 		justify-content: center;
 			img {
+				//border: @border;
 				height: 550px;
 				margin-top: -480px;
 				z-index: 1;
@@ -149,6 +154,7 @@ body {
 					.xs-block({
 						height: 400px;
 						transition: @transition;
+						margin-top: -650px;
 					});
 			}
 	}
@@ -170,7 +176,7 @@ body {
 				.xs-block({
 					transition: @transition;
 					letter-spacing: 1px;
-					font-size: 1.5rem;
+					font-size: 1.9rem;
 					margin-top: -25px;
 				});
 		}
@@ -304,6 +310,9 @@ body {
 				text-align: center;
 				//transition: @transition;
 			});
+			.xs-block({
+				font-size: 1.1rem;
+			});
 		}
 	}
 	&__texttoo {
@@ -329,12 +338,12 @@ body {
 				text-align: center;
 				//transition: @transition;
 			});
+			.xs-block({
+				font-size: 1rem;
+			});
 		}
 	}
 	&__textthree {
-		//border: @border;
-		//width: 17%;
-		//.row-flex();
 		display: flex;
 		.size(3);
 		.size-xl(4);
@@ -353,6 +362,9 @@ body {
 			.sm-block({
 				text-align: center;
 				//transition: @transition;
+			});
+			.xs-block({
+				font-size: 1rem;
 			});
 		}
 	}
@@ -378,7 +390,7 @@ body {
 					transition: @transition;
 				});
 				.sm-block({
-					font-size: 1.5rem;
+					font-size: 1.9rem;
 					transition: @transition;
 				});
 		}
@@ -420,11 +432,13 @@ body {
 				.md-block({
 					width: 40px;
 					margin-top: -40px;
+					transition: @transition;
 				});
 				.sm-block({
 					width: 30px;
 					height: 2px;
-					margin-top: -50px;
+					margin-top: -30px;
+					transition: @transition;
 				});
 		}
 	}
@@ -442,6 +456,11 @@ body {
 			});
 			.md-block({
 				width: 60%;
+			});
+			.xs-block({
+				.row-flex();
+				width: 70%;
+				justify-content: center;
 			});
 	}
 	&__left {
@@ -541,7 +560,7 @@ body {
 				transition: @transition;
 			});
 			.sm-block({
-				font-size: 1.5rem;
+				font-size: 1.9rem;
 				transition: @transition;
 			});
 		}
@@ -583,19 +602,19 @@ body {
 			font-family: 'Russo One', sans-serif;
 			transition: @transition;
 			.xl-block({
-				width: 30%;
+				width: 40%;
 				transition: @transition;
 			});
 			.md-block({
-				font-size: 1rem;
+				font-size: 1.2rem;
 				margin-top: 40px;
 			});
 			.sm-block({
 				width: 45%;
-				font-size: 0.8rem;
+				font-size: 1rem;
 			});
 			.xs-block({
-				font-size: 0.6rem;
+				font-size: 0.8rem;
 			});
 			h4 {
 				color: @turquoise;
@@ -617,10 +636,11 @@ body {
 		});
 		.xs-block({
 			margin-top: 30px;
+			display: none;
 			transition: @transition;
 		});
 		img {
-			//border: @border	;
+			//border: @border;
 			width: 60%;
 			height: 100%;
 			transition: @transition;
